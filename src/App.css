@@ -1,0 +1,16 @@
+.con {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    body {
+      width: auto;
+      height: auto;
+    }
+
+}

@@ -1,0 +1,42 @@
+.home{
+    color: #112A46;
+    padding-top: 70px;
+    margin:0 auto;
+    text-align: center;
+    
+  }
+  
+  .ul-b{
+    display:flex;
+    list-style-type: none;
+    gap: 10px;
+    justify-items:center;
+    font-weight: bold;
+    
+  }
+  .ul-b li{
+    display:flex;
+    margin:auto auto;
+    height:3rem;
+    padding:0.5rem;
+    align-items:center;
+    justify-content:center;
+    border-radius:15px;
+    
+  }
+  
+  
+  .home-text{
+    font-size:24px;
+    margin-bottom:16px;
+  }
+  
+  
+  
+  @media only screen and (max-width: 600px) {
+    body {
+      width: auto;
+      height: auto;
+    }
+
+  }

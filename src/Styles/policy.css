@@ -1,0 +1,48 @@
+.pol-con {
+    padding: 1rem;
+    background-color: #88daec;
+}
+
+.pol-con p {
+    font-size: 16px;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+
+}
+
+.pol-con h3 {
+    font-size: 24px;
+    margin-bottom: 0.5rem;
+}
+
+.pol-con span {
+    font-weight: 900;
+}
+
+
+.pol-con a {
+    padding: .5rem .8rem .5rem .8rem;
+    border:0;
+    border-radius: 5px;
+    font-size: 20px;
+    text-decoration: none;
+    background-color: aliceblue;
+}
+
+.pol-con .text-con{
+    margin-top: 1rem;
+    background-color: azure;
+    padding: 0.5rem;
+    border-radius: 15px;
+}
+
+.pol-con .check-box{
+    display: flex;
+    margin-top: 0.5rem;
+    margin-bottom: 2.5rem;
+    font-size: 16px;
+}
+
+.pol-con input{
+    margin-right: 0.25rem;
+}
