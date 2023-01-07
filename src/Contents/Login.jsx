@@ -33,7 +33,7 @@ function Login() {
         redirect: 'follow'
       };
 
-      fetch("https://aggressive-ant-tunic.cyclic.app/login", requestOptions)
+      fetch("http://localhost:3333/login", requestOptions)
         .then(response => response.json())
         .then(result => {
           console.log(result)

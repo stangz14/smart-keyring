@@ -12,6 +12,19 @@ function Rigister() {
     const navigate = useNavigate()
     const MySwal = withReactContent(Swal)
     const [inputs, setInputs] = useState({});
+    const [fname, setFname] = useState("");
+    const [lname, setLname] = useState("");
+    const [age, setAge] = useState("");
+    const [bloodtype, setBloodtype] = useState("");
+    const [phonenumber, setPhonenumber] = useState("");
+    const [emergencynumber, setEmergencynumber] = useState("");
+    const [foodallergies, setFoodallergies] = useState("");
+    const [drugallergy, setDrugallergy] = useState("");
+    const [congenitaldisease, setCongenitaldisease] = useState("");
+    const [email ,setEmail] = useState("");
+    const [password ,setpassword] = useState("");
+
+
 
   const handleChange = (event) => {
     const name = event.target.name;
@@ -25,44 +38,31 @@ function Rigister() {
     myHeaders.append("Content-Type", "application/json");
 
     var raw = JSON.stringify({
-    "email": inputs.email,
-    "password": inputs.password,
-    "fname": inputs.fname,
-    "lname": inputs.lname,
-    "age": inputs.age,
-    "foodallergies": inputs.foodallergies,
-    "drugallergy": inputs.drugallergy,
-    "emergencynumber": inputs.emergencynumber,
-    "congenitaldisease": inputs.congenitaldisease,
-    "bloodtype": inputs.bloodtype,
-    "phonenumber": inputs.phonenumber
+      "email": email,
+      "password": password,
+      "fname": fname,
+      "lname": lname,
+      "age": age,
+      "foodallergies": foodallergies,
+      "drugallergy": drugallergy,
+      "emergencynumber": emergencynumber,
+      "congenitaldisease": congenitaldisease,
+      "bloodtype": bloodtype,
+      "phonenumber": phonenumber
     });
 
     var requestOptions = {
-    method: 'POST',
-    headers: myHeaders,
-    body: raw,
-    redirect: 'follow'
+      method: 'POST',
+      headers: myHeaders,
+      body: raw,
+      redirect: 'follow'
     };
 
-    fetch("https://aggressive-ant-tunic.cyclic.app/register", requestOptions)
-    .then(response => response.json())
-    .then(result => {
-        if (result.status === 'ok') {
-            MySwal.fire({
-                html: <i>{result.message}</i>,
-                icon: 'success'
-            }).then((value) => {
-                navigate('/policy')
-            });
-        } else {
-            MySwal.fire({
-                html: <i>{result.message}</i>,
-                icon: 'error'
-            })
-        }
-    })
-    .catch(error => console.log('error', error));
+    fetch("http://localhost:3333/register", requestOptions)
+      .then(response => response.json())
+      .then(result => {console.log(result)})
+      .catch(error => console.log('error', error));
+    
   }
   return (
     <>
@@ -74,8 +74,8 @@ function Rigister() {
         type="text" 
         name="email" 
         placeholder="อีเมล"
-        value={inputs.email || ""} 
-        onChange={handleChange}
+        value={email || ""} 
+            onChange={event => setEmail(event.target.value)}
       />
       </label>
       <label>
@@ -83,8 +83,8 @@ function Rigister() {
           type="password" 
           name="รหัสผ่าน" 
           placeholder="password"
-          value={inputs.password } 
-          onChange={handleChange}
+          value={password || ""} 
+            onChange={event => setpassword(event.target.value)}
         />
         </label>
         <label>
@@ -92,8 +92,8 @@ function Rigister() {
             type="text" 
             name="fname" 
             placeholder="ชื่อ"
-            value={inputs.fname || ""} 
-            onChange={handleChange}
+            value={fname || ""} 
+            onChange={event => setFname(event.target.value)}
         />
         </label>
         <label>
@@ -101,8 +101,8 @@ function Rigister() {
             type="text" 
             name="lname" 
             placeholder="นามสกุล"
-            value={inputs.lname || ""} 
-            onChange={handleChange}
+            value={lname || ""} 
+            onChange={event => setLname(event.target.value)}
         />
         </label>
         <label>
@@ -110,8 +110,8 @@ function Rigister() {
             type="text" 
             name="age" 
             placeholder="อายุ"
-            value={inputs.age || ""} 
-            onChange={handleChange}
+            value={age || ""} 
+            onChange={event => setAge(event.target.value)}
         />
         </label>
         <label>
@@ -119,8 +119,8 @@ function Rigister() {
             type="text" 
             name="bloodtype" 
             placeholder="กรุ๊ปเลือด"
-            value={inputs.bloodtype || ""} 
-            onChange={handleChange}
+            value={bloodtype ||''}
+            onChange={event => setBloodtype(event.target.value)}
         />
         </label>
         <label>
@@ -128,8 +128,8 @@ function Rigister() {
             type="text" 
             name="phonenumber" 
             placeholder="เบอร์โทร"
-            value={inputs.phonenumber || ""} 
-            onChange={handleChange}
+            value={phonenumber || ""} 
+            onChange={event => setPhonenumber(event.target.value)}
         />
         </label>
         <label>
@@ -137,8 +137,8 @@ function Rigister() {
             type="text" 
             name="emergencynumber" 
             placeholder="เบอร์ฉุกเฉิน"
-            value={inputs.emergencynumber || ""} 
-            onChange={handleChange}
+            value={emergencynumber || ""} 
+            onChange={event => setEmergencynumber(event.target.value)}
         />
         </label>
         <label>
@@ -146,8 +146,8 @@ function Rigister() {
             type="text" 
             name="foodallergies" 
             placeholder="อาหารที่แพ้"
-            value={inputs.foodallergies || ""} 
-            onChange={handleChange}
+            value={foodallergies || ""} 
+            onChange={event => setFoodallergies(event.target.value)}
         />
         </label>
         <label>
@@ -155,8 +155,8 @@ function Rigister() {
             type="text" 
             name="drugallergy" 
             placeholder="ยาที่แพ้"
-            value={inputs.drugallergy || ""} 
-            onChange={handleChange}
+            value={fname || ""} 
+            onChange={event => setDrugallergy(event.target.value)}
         />
         </label>
         <label>
@@ -164,8 +164,8 @@ function Rigister() {
             type="text" 
             name="congenitaldisease" 
             placeholder="โรคประจำตัว"
-            value={inputs.congenitaldisease || ""} 
-            onChange={handleChange}
+            value={congenitaldisease || ""} 
+            onChange={event => setCongenitaldisease(event.target.value)}
         />
         </label>
         
