@@ -7,13 +7,15 @@ import { useSearchParams } from 'react-router-dom'
 
 function Home(){
 
-  const [latitude, setLatitude] = useState(null);
-  const [longitude, setLongitude] = useState(null);
+  const [latitude, setLatitude] = useState("");
+  const [longitude, setLongitude] = useState("");
   const [searchParams, setSearchParams] = useSearchParams();
+  const [fname , setFname] = useState(null);
   
   const [id, setId] = useState(null);
-  const [name ,setName] =useState('');
- 
+  const [name ,setName] =useState("");
+  var i = 0;
+  var email
 
   useEffect(() => {
     setId(searchParams.get('id'));
@@ -33,10 +35,16 @@ function Home(){
     
     fetch("https://aggressive-ant-tunic.cyclic.app/profile", requestOptions)
       .then(response => response.json())
-      .then(result => {setName(result.user)}
+      .then(result => {setName(result.user) 
+      //  console.log(result.user.email)
+      // setFname(result.user.email)
+    }
       )
       .catch(error => console.log('error', error));
-  });
+    
+
+  } ,[]);
+  
 
 
   const getLocation = () => {
@@ -45,25 +53,26 @@ function Home(){
         setLatitude(position.coords.latitude);
         setLongitude(position.coords.longitude);
         notify();
-        var myHeaders = new Headers();
-        let po = `https://www.google.com/maps/place/${latitude},${longitude}`;
-        myHeaders.append("Content-Type", "application/json");
+        console.log(`https://www.google.com/maps/place/${latitude},${longitude}`);
+      //   var myHeaders = new Headers();
+      //   // let po = `https://www.google.com/maps/place/${latitude},${longitude}`;
+      //   myHeaders.append("Content-Type", "application/json");
 
-        var raw = JSON.stringify({
-          "password": po
-        });
+      //   var raw = JSON.stringify({
+      //     "password": po
+      //   });
 
-        var requestOptions = {
-          method: 'POST',
-          headers: myHeaders,
-          body: raw,
-          redirect: 'follow'
-        };
+      //   var requestOptions = {
+      //     method: 'POST',
+      //     headers: myHeaders,
+      //     body: raw,
+      //     redirect: 'follow'
+      //   };
 
-        fetch("https://aggressive-ant-tunic.cyclic.app/send", requestOptions)
-          .then(response => response.text())
-          .then(result => console.log(result))
-          .catch(error => console.log('error', error));
+      //   fetch("https://aggressive-ant-tunic.cyclic.app/send", requestOptions)
+      //     .then(response => response.text())
+      //     .then(result => console.log(result))
+      //     .catch(error => console.log('error', error));
         
       },
       (error) => console.error(error),
@@ -86,6 +95,7 @@ function Home(){
   
         return (
             <div className="home" id="home">
+              <h3>sd</h3>
               <br/>
               <h3 className="home-text">กดปุ่มเพื่อแจ้งเตือน</h3>
               <div className="button-con">

@@ -79,7 +79,7 @@ function Profile() {
       redirect: 'follow'
     };
 
-    fetch("http://localhost:3333/authen", requestOptions)
+    fetch("https://aggressive-ant-tunic.cyclic.app/authen", requestOptions)
       .then(response => response.json())
       .then(result => {
         if(result.status === 'ok'){

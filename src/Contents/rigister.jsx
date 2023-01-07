@@ -66,7 +66,7 @@ function Rigister() {
               html: <i>{result.message}</i>,
               icon: 'success'
           }).then((value) => {
-              navigate('/login')
+              navigate('/policy')
           });
       } else {
           MySwal.fire({
@@ -185,6 +185,9 @@ function Rigister() {
         
         <input type="submit" value="submit"/>
     </form>
+    <div className='check-box'>
+        <input type="checkbox" /><p>ยอมรับข้อตกลงการใช้ข้อมูลส่วนบุคคล</p>
+        </div>
     <div className='a-box'>
       <a href='/login'>หากมีบัญชีอยู่แล้ว</a>
     </div>

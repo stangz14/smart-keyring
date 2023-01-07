@@ -1,3 +1,63 @@
+
+
+@media only screen and (max-width: 600px) {
+
+
+    .login-box{
+        min-width: 100%;
+        height: 100vh;
+        /* border: dotted #F55A00 5vw; */
+        /* border: 1px solid red; */
+        margin: 0vw;
+        padding: 5vw ;
+        position:relative; 
+        background-color: #88daec;
+    }
+    
+    
+    .login-box h5{
+        font-size: 35px ;
+        text-align: center;
+        color: #112A46;
+        margin: 0 0 .5vh 0;
+    }
+    
+    .login-box label{
+        display: block;
+        text-align: center;
+        font-size: 20px;
+        margin: 0 0 2vh 0;
+    }
+    
+    .login-box input{
+        display: block;
+        width: 100%;
+        padding: .5rem .8rem .5rem .8rem;
+        margin: .9vw 0 ;
+        border:0;
+        border-radius: 5px;
+        font-size: 20px;
+    }
+    
+    
+    .login-box .a-box {
+        text-align: end;
+        padding: 0.5rem 0;
+    }
+    
+    .login-box a{
+        font-weight: 500;
+        color: blue;
+        text-decoration: underline;
+    }
+    
+    
+    .login-box a:hover {
+        color: red;
+    }
+
+}
+
 .login-box{
     min-width: 100%;
     height: 100vh;
@@ -9,14 +69,12 @@
     background-color: #88daec;
 }
 
-
 .login-box h5{
     font-size: 35px ;
     text-align: center;
     color: #112A46;
     margin: 0 0 .5vh 0;
 }
-
 .login-box label{
     display: block;
     text-align: center;
@@ -27,7 +85,7 @@
 .login-box input{
     display: block;
     width: 100%;
-    padding: .5rem .8rem .5rem .8rem;
+    padding: 1rem .8rem 1rem .8rem;
     margin: .9vw 0 ;
     border:0;
     border-radius: 5px;
