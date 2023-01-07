@@ -58,9 +58,23 @@ function Rigister() {
       redirect: 'follow'
     };
 
-    fetch("http://localhost:3333/register", requestOptions)
+    fetch("https://aggressive-ant-tunic.cyclic.app/register", requestOptions)
       .then(response => response.json())
-      .then(result => {console.log(result)})
+      .then(result => {
+        if (result.status === 'ok') {
+          MySwal.fire({
+              html: <i>{result.message}</i>,
+              icon: 'success'
+          }).then((value) => {
+              navigate('/login')
+          });
+      } else {
+          MySwal.fire({
+              html: <i>{result.message}</i>,
+              icon: 'error'
+          })
+      }
+      })
       .catch(error => console.log('error', error));
     
   }
@@ -155,7 +169,7 @@ function Rigister() {
             type="text" 
             name="drugallergy" 
             placeholder="ยาที่แพ้"
-            value={fname || ""} 
+            value={drugallergy || ""} 
             onChange={event => setDrugallergy(event.target.value)}
         />
         </label>
