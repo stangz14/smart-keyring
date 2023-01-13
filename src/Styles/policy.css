@@ -26,7 +26,8 @@
     border-radius: 5px;
     font-size: 20px;
     text-decoration: none;
-    background-color: aliceblue;
+    background-color: #fff;
+    box-shadow:  0px 1px 0px 2px #112A46;
 }
 
 .pol-con .text-con{
@@ -45,4 +46,19 @@
 
 .pol-con input{
     margin-right: 0.25rem;
+}
+
+.pol-con .a-con{
+    margin-top: 1rem;
+    
+}
+
+.pol-box{
+    background-color: aliceblue;
+    padding: 2rem;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    box-shadow: 6px 6px 0px 4px black;
+    border-radius: 60px; 
 }

@@ -23,10 +23,10 @@ header {
 	padding: 0 2rem;
 	background-color: var(--mainColor);
 	color: var(--textColor);
-  top: 0;
-  left: 0;
-  width: 100%;
-  position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	position: fixed;
 }
 
 nav a {
@@ -51,10 +51,22 @@ header .nav-btn {
 	font-size: 1.8rem;
 }
 
-header div,
-nav {
+header div {
 	display: flex;
 	align-items: center;
+}
+
+
+nav{
+	display: flex;
+	justify-content: space-between;
+	box-sizing: border-box;
+	align-items: center;
+}
+
+.item {
+	padding: 0 20px;
+	text-align: end;
 }
 
 @media only screen and (max-width: 1024px) {

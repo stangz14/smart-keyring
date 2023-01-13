@@ -88,8 +88,10 @@
     padding: 1rem .8rem 1rem .8rem;
     margin: .9vw 0 ;
     border:0;
-    border-radius: 5px;
+    border-radius: 60px;
     font-size: 20px;
+    background-color: #fff;
+    box-shadow:  0px 1px 0px 2px #112A46;
 }
 
 
@@ -107,4 +109,15 @@
 
 .login-box a:hover {
     color: red;
+}
+
+
+.login-con{
+    background-color: aliceblue;
+    padding: 2rem;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    box-shadow: 6px 6px 0px 4px black;
+    border-radius: 60px; 
 }

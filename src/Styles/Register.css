@@ -1,126 +1,147 @@
 @media only screen and (max-width: 600px) {
+  
+    .re-box {
+        min-width: 100%;
+        height: 100%;
+        /* border: dotted #F55A00 5vw; */
+        /* border: 1px solid red; */
+        margin: 0vw;
+        padding: 5vw ;
+        position:relative; 
+        background-color: #88daec;
+    }
+    
+    .re-box h5{
+        font-size: 35px ;
+        text-align: center;
+        color: #112A46;
+        margin: 0 0 .5vh 0;
+    }
+    
+    
+    .re-box label{
+        display: block;
+        text-align: center;
+        font-size: 20px;
+        margin: 0 0 2vh 0;
+    }
+    
+    .re-box input{
+        display: block;
+        width: 100%;
+        padding: .5rem .8rem .5rem .8rem;
+        margin: .9vw 0 ;
+        border:0;
+        border-radius: 5px;
+        font-size: 20px;
+    }
+    
+    
+    .re-box .a-box{
+        text-align: end;
+        padding: 0.5rem 0;
+    }
+    
+    .re-box a {
+        text-decoration: underline;
+        color: blue;
+    }
+    
+    .re-box a:hover {
+        color: red;
+    }
+    
+    .re-box .check-box{
+        display: flex;
+        gap: 0;
+        margin: 0%;
+        justify-content: start;
+    }
+    
+    }
+    
+    
+    .re-box {
+        min-width: 100%;
+        height: 100%;
+        /* border: dotted #F55A00 5vw; */
+        /* border: 1px solid red; */
+        margin: 0vw;
+        padding: 5vw ;
+        position:relative; 
+        background-color: #88daec;
+    }
+    
+    .re-box h5{
+        font-size: 35px ;
+        text-align: center;
+        color: #112A46;
+        margin: 0 0 .5vh 0;
+    }
+    
+    
+    .re-box label{
+        display: block;
+        text-align: center;
+        font-size: 20px;
+        margin: 0.5rem;
+    }
+    
+    .re-box input,select{
+        display: block;
+        width: 100%;
+        padding: 1rem 5rem .5rem .8rem;
+        margin: .9vw 0.5rem ;
+        border: none;
+        border-radius: 60px;
+        font-size: 20px;
+        background-color: #fff;
+        box-shadow:  0px 1px 0px 2px #112A46;
+    }
+    
+    
+    .re-box .a-box{
+        text-align: end;
+        padding: 0.5rem 0;
+    }
+    
+    .re-box a {
+        text-decoration: underline;
+        color: blue;
+    }
+    
+    .re-box a:hover {
+        color: red;
+    }
+    
+    .re-box .check-box{
+        display: flex;
+        gap: 0;
+        margin: 0%;
+        justify-content: start;
+    }
+    
+     input a {
+      margin:0;
+    }
+    
+    .re-box .check-box{
+      display:flex;
+      justify-content: flex-start;
+      /* justify-item: start; */
+    }
+    
+    .re-box p {
+        text-align: start;
+        margin-left: 1.5rem;
+    }
 
-.re-box {
-    min-width: 100%;
-    height: 100vh;
-    /* border: dotted #F55A00 5vw; */
-    /* border: 1px solid red; */
-    margin: 0vw;
-    padding: 5vw ;
-    position:relative; 
-    background-color: #88daec;
-}
-
-.re-box h5{
-    font-size: 35px ;
-    text-align: center;
-    color: #112A46;
-    margin: 0 0 .5vh 0;
-}
-
-
-.re-box label{
-    display: block;
-    text-align: center;
-    font-size: 20px;
-    margin: 0 0 2vh 0;
-}
-
-.re-box input{
-    display: block;
-    width: 100%;
-    padding: .5rem .8rem .5rem .8rem;
-    margin: .9vw 0 ;
-    border:0;
-    border-radius: 5px;
-    font-size: 20px;
-}
-
-
-.re-box .a-box{
-    text-align: end;
-    padding: 0.5rem 0;
-}
-
-.re-box a {
-    text-decoration: underline;
-    color: blue;
-}
-
-.re-box a:hover {
-    color: red;
-}
-
-.re-box .check-box{
-    display: flex;
-    gap: 0;
-    margin: 0%;
-    justify-content: start;
-}
-
-}
-
-
-.re-box {
-    min-width: 100%;
-    height: 100vh;
-    /* border: dotted #F55A00 5vw; */
-    /* border: 1px solid red; */
-    margin: 0vw;
-    padding: 5vw ;
-    position:relative; 
-    background-color: #88daec;
-}
-
-.re-box h5{
-    font-size: 35px ;
-    text-align: center;
-    color: #112A46;
-    margin: 0 0 .5vh 0;
-}
-
-
-.re-box label{
-    display: block;
-    text-align: center;
-    font-size: 20px;
-    margin: 0.5rem;
-}
-
-.re-box input{
-    display: block;
-    width: 100%;
-    padding: 1rem 1rem .5rem .8rem;
-    margin: .9vw 0.5rem ;
-    border:0;
-    border-radius: 5px;
-    font-size: 20px;
-}
-
-
-.re-box .a-box{
-    text-align: end;
-    padding: 0.5rem 0;
-}
-
-.re-box a {
-    text-decoration: underline;
-    color: blue;
-}
-
-.re-box a:hover {
-    color: red;
-}
-
-.re-box .check-box{
-    display: flex;
-    gap: 0;
-    margin: 0%;
-    justify-content: start;
-}
-
-.re-box form{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 100px;
-}
+    .re-con{
+        background-color: aliceblue;
+        padding: 2rem;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        box-shadow: 6px 6px 0px 4px black;
+        border-radius: 60px; 
+    }

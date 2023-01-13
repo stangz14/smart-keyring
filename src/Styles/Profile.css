@@ -2,7 +2,7 @@
 	padding-top: 85px;
 	text-align: center;
 	min-width: 100%;
-    height: 100vh;
+  height: 100%;
     /* border: dotted #F55A00 5vw; */
     /* border: 1px solid red; */
     margin: 0vw;
@@ -18,12 +18,57 @@
     margin: 0 0 2vh 0;
 }
 
-.profile-con input{
+.profile-con input,select{
     display: block;
     width: 100%;
     padding: .5rem .8rem .5rem .8rem;
     margin: .9vw 0 ;
     border:0;
-    border-radius: 5px;
+    border-radius: 60px;
     font-size: 20px;
+    background-color: #fff;
+    box-shadow:  0px 1px 0px 2px #112A46;
 }
+
+.qr-box{
+  margin: 2rem auto;
+  text-align: center;
+  
+}
+
+
+.qr-box img{
+  width:100%;
+  margin:1rem;
+  
+}
+
+
+.qr-box button{
+  display: block;
+  width: 250px;
+  padding: .5rem .5rem .5rem .5rem;
+  margin: 0 auto;
+  border:0;
+  border-radius: 60px;
+  font-size: 20px;
+  background-color: #fff;
+  box-shadow:  0px 1px 0px 2px #112A46;  
+}
+
+.qr-box .img-con{
+  width: 150px;
+  height: 150px;
+  margin: 3rem auto;
+}
+
+
+.pro-box {
+  background-color: aliceblue;
+  padding: 2rem;
+  justify-content: center;
+  box-shadow: 6px 6px 0px 4px black;
+  border-radius: 60px; 
+}
+
+

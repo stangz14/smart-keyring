@@ -7,8 +7,10 @@ import Home from '../Components/Home'
 function Accident() {
   return (
     <>
+    <div>
     <Navbar />
     <Home />
+    </div>
     </>
   )
 }

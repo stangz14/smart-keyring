@@ -18,9 +18,9 @@ function Navbar() {
 		<header >
 			<h3>Smart Keyring</h3>
 			<nav ref={navRef}>
-				<a href="#home" onClick={showNavbar}>Home</a>
-				<a href="#firstaid" onClick={showNavbar}>First aid</a>
-				<a href="/profile" onClick={showNavbar}>Profile</a>
+				<a href="#home" onClick={showNavbar} className="item">Home</a>
+				<a href="#firstaid" onClick={showNavbar} className="item">First aid</a>
+				<a href="/profile" onClick={showNavbar} className="item">Profile</a>
 				<button
 					className="nav-btn nav-close-btn"
 					onClick={showNavbar}>

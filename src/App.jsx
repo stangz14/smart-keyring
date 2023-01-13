@@ -5,6 +5,7 @@ import Navbar from "./Components/Navbar";
 
 export default function App() {
 
+  let id = useParams()
   return (
     <>
       <div  className="con">

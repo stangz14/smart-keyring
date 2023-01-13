@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App'
 import './index.css'
 
 //contens
@@ -21,7 +20,7 @@ import {
 const router = createBrowserRouter([
   {
     path: "/accident",
-    element: <Accident/>,
+    element: <Accident />,
   },
   {
     path: "/login",
@@ -38,7 +37,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Index />,
-  },{
+  }, {
     path: "/policy",
     element: <Policy />
   }
@@ -46,6 +45,6 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-     <RouterProvider router={router} />
+    <RouterProvider router={router} />
   </React.StrictMode>,
 )
